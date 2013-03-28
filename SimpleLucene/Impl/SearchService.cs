@@ -38,7 +38,7 @@ namespace SimpleLucene.Impl
             var searcher = this.GetSearcher();
             TopDocs hits = null;
             hits = searcher.Search(query, 25000);
-            var results = hits.ScoreDocs.Select(h => searcher.Doc(h.doc));
+            var results = hits.ScoreDocs.Select(h => searcher.Doc(h.Doc));
             return new SearchResult<T>(results, definition);
         }
 

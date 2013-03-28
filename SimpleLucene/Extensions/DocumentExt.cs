@@ -14,7 +14,7 @@ namespace SimpleLucene
         /// <param name="document">Document to add field to</param>
         /// <param name="field">Field to add</param>
         /// <returns>Document</returns>
-        public static Document AddField(this Document document, Fieldable field) {
+        public static Document AddField(this Document document, IFieldable field) {
             if (document != null)
                 document.Add(field);
             return document;
