@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Indexing">
+    <Position X="1.745" Y="0.765" Height="0.312" Width="1.71" />
+  </Comment>
+  <Comment CommentText="Searching">
+    <Position X="6.944" Y="0.796" Height="0.312" Width="1.71" />
+  </Comment>
+  <Comment CommentText="Index Management">
+    <Position X="12.125" Y="0.783" Height="0.291" Width="1.71" />
+  </Comment>
+  <Class Name="SimpleLucene.Impl.DirectoryIndexWriter">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Impl\DirectoryIndexWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.Impl.IndexService">
+    <Position X="2.5" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACABAAAACAAAAAAEAAABAAAAAAAAAAQAAAAAAAAEAQ=</HashCode>
+      <FileName>Impl\IndexService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.Impl.DirectoryIndexSearcher">
+    <Position X="5.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAACAA=</HashCode>
+      <FileName>Impl\DirectoryIndexSearcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.Impl.SearchService">
+    <Position X="8" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAAAEEABAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Impl\SearchService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.IndexManagement.EntityDeleteTask&lt;TEntity&gt;">
+    <Position X="10.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQACAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndexManagement\Impl\EntityDeleteTask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.IndexManagement.EntityUpdateTask&lt;TEntity&gt;">
+    <Position X="10.5" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAIAAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndexManagement\Impl\EntityUpdateTask.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SimpleLucene.IndexManagement.IndexQueue">
+    <Position X="13.25" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAgAAAAAAAAAAQABAAAAAQAAAAAAQAAA=</HashCode>
+      <FileName>IndexManagement\IndexQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SimpleLucene.IIndexDefinition&lt;T&gt;">
+    <Position X="2.5" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IIndexDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.IIndexSearcher">
+    <Position X="5.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IIndexSearcher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.IIndexService">
+    <Position X="2.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Interfaces\IIndexService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.IIndexWriter">
+    <Position X="0.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IIndexWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.IResultDefinition&lt;T&gt;">
+    <Position X="5.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IResultDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.ISearchService">
+    <Position X="8" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Interfaces\ISearchService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleLucene.IndexManagement.IIndexTask">
+    <Position X="10.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndexManagement\IIndexTask.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
