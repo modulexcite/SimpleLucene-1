@@ -9,13 +9,13 @@ namespace SimpleLucene.Impl
     /// Default search service implementation
     /// </summary>
     public class SearchService : ISearchService {
-        private bool isDisposed;
-        private readonly IIndexSearcher indexSearcher;
-        private Searcher luceneSearcher;
+        private bool _isDisposed;
+        private readonly IIndexSearcher _indexSearcher;
+        private Searcher _luceneSearcher;
 
         public SearchService(IIndexSearcher indexSearcher) {
             Helpers.EnsureNotNull(indexSearcher, "indexSearcher");
-            this.indexSearcher = indexSearcher;
+            this._indexSearcher = indexSearcher;
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace SimpleLucene.Impl
         /// <param name="query">A Lucene query to use for the search</param>
         /// <returns>A search result containing Lucene documents</returns>
         public SearchResult<Document> SearchIndex(Query query) {
-            return SearchIndex<Document>(query, new DocumentResultDefinition());
+            return SearchIndex(query, new DocumentResultDefinition());
         }
 
         /// <summary>
@@ -35,27 +35,27 @@ namespace SimpleLucene.Impl
         /// <param name="definition">A search definition used to transform the returned Lucene documents</param>
         /// <returns>A search result object containing both Lucene documents and typed objects based on the definition</returns>
         public SearchResult<T> SearchIndex<T>(Query query, IResultDefinition<T> definition) {
-            var searcher = this.GetSearcher();
-            TopDocs hits = null;
-            hits = searcher.Search(query, 25000);
-            var results = hits.ScoreDocs.Select(h => searcher.Doc(h.Doc));
+            var searcher = GetSearcher();
+            var collector = TopScoreDocCollector.Create(25000, true);
+            searcher.Search(query, collector);
+            var results = collector.TopDocs().ScoreDocs.Select(h => searcher.Doc(h.Doc));
             return new SearchResult<T>(results, definition);
         }
 
         public void Dispose() {
-            if (!isDisposed && luceneSearcher != null)
-                luceneSearcher.Close();
-            luceneSearcher = null;
+            if (!_isDisposed && _luceneSearcher != null)
+                _luceneSearcher.Dispose();
+            _luceneSearcher = null;
         }
 
         protected Searcher GetSearcher() {
-            if (isDisposed)
-                isDisposed = false;
+            if (_isDisposed)
+                _isDisposed = false;
 
-            if (luceneSearcher == null)
-                luceneSearcher = indexSearcher.Create();
+            if (_luceneSearcher == null)
+                _luceneSearcher = _indexSearcher.Create();
 
-            return luceneSearcher;
+            return _luceneSearcher;
         }
     }
 }
